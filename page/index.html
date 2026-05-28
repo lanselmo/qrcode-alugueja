@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <title>Redirecionando...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23ffffff'/><rect x='6' y='6' width='18' height='18' fill='%23050814'/><rect x='40' y='6' width='18' height='18' fill='%23050814'/><rect x='6' y='40' width='18' height='18' fill='%23050814'/><rect x='24' y='24' width='16' height='16' fill='%23050814'/><rect x='44' y='44' width='14' height='14' fill='%23050814'/></svg>" />
+  <style>
+    body { justify-content:center; }
+  </style>
+</head>
+  <body>
+  <div class="card" style="max-width:520px; text-align:center;">
+    <div id="loading" class="hidden">
+      <div class="loading" style="margin: auto;"></div>
+      <h2>Redirecionando...</h2>
+      <p style="color:var(--text-dim);">Aguarde um instante.</p>
+    </div>
+    <div id="inactive" class="hidden">
+      <div class="empty-state-icon" style="font-size:4rem;"><i class="fas fa-ban"></i></div>
+      <h2>QR Code inativo</h2>
+      <p style="color:var(--text-dim);">Este QR Code foi desativado.</p>
+    </div>
+    <div id="notfound" class="hidden">
+      <div class="empty-state-icon" style="font-size:4rem;"><i class="fas fa-search"></i></div>
+      <h2>Não encontrado</h2>
+      <p style="color:var(--text-dim);">Nenhum QR Code corresponde a esse ID.</p>
+    </div>
+    <div id="error" class="hidden">
+      <div class="empty-state-icon" style="font-size:4rem;"><i class="fas fa-exclamation-triangle"></i></div>
+      <h2>Erro inesperado</h2>
+      <p style="color:var(--text-dim);">Tente novamente mais tarde.</p>
+    </div>
+    <div id="content" class="hidden">
+      <div class="empty-state-icon" style="font-size:4rem;"><i class="fas fa-file-alt"></i></div>
+      <h2>Conteúdo do QR</h2>
+      <p id="contentValue" style="color:var(--text); word-break:break-all;"></p>
+      <a id="contentAction" class="btn btn-primary hidden" href="#" target="_blank" rel="noopener noreferrer">Abrir</a>
+    </div>
+  </div>
+  <script type="module" src="../assets/js/pages/redirect.js"></script>
+  </body>
+</html>

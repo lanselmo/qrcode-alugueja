@@ -1,0 +1,46 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "source": "functions"
+  },
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "SETUP.md",
+      "README.md"
+    ],
+    "rewrites": [
+      {
+        "source": "/page/edit.html",
+        "destination": "/page/edit.html"
+      },
+      {
+        "source": "/page/new.html",
+        "destination": "/page/new.html"
+      },
+      {
+        "source": "/page/dashboard.html",
+        "destination": "/page/dashboard.html"
+      },
+      {
+        "source": "/page/**",
+        "destination": "/page/index.html"
+      },
+      {
+        "source": "/*",
+        "destination": "/page/index.html"
+      }
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    }
+  }
+}

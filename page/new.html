@@ -99,7 +99,7 @@
               Esta será a URL permanente do QR Code. Mesmo mudando o destino, o QR continua o mesmo.
             </p>
             <div class="input-with-icon" style="gap:.35rem;">
-              <span style="font-size:.9rem; color:var(--text-dim);"></span>
+              <span style="font-size:.9rem; color:var(--text-dim);" class="dynamic-domain-display"></span>
               <input id="fixedUser" name="fixedUser" type="text" placeholder="seu-id-ou-nome" style="max-width:140px;" />
               <span style="font-size:1rem; color:var(--text-dim);">/</span>
               <input id="fixedSlug" name="fixedSlug" type="text" placeholder="meu-link" />
@@ -208,5 +208,12 @@
     })();
   </script>
   <script type="module" src="../assets/js/pages/new.js"></script>
+
+  <script>
+    document.querySelectorAll('.dynamic-domain-display').forEach(el => {
+      el.textContent = window.location.host + '/';
+    });
+  </script>
 </body>
+
 </html>

@@ -334,7 +334,7 @@
                             <label>Link fixo do QR Code *</label>
                             <div class="url-builder">
                                 <i class="fas fa-globe" style="color:var(--text-dim); margin-right:0.5rem;"></i>
-                                <span></span>
+                                <span class="dynamic-domain-display"></span>
                                 <input id="fixedUser" name="fixedUser" type="text" placeholder="user"
                                     style="max-width:80px;" required />
                                 <span>/</span>
@@ -492,6 +492,13 @@
     <script src="https://sdk.mercadopago.com/js/v2"></script>
 
     <script type="module" src="../assets/js/pages/create-card.js"></script>
+
+  <script>
+    document.querySelectorAll('.dynamic-domain-display').forEach(el => {
+      el.textContent = window.location.host + '/';
+    });
+  </script>
 </body>
+
 
 </html>
